@@ -28,7 +28,8 @@ function onFormSubmit(e) {
   console.log({ email: email.value, message: message.value });
 
   if (email.value === '' || message.value === '') {
-    return alert('Будь ласка, заповніть всі поля форми!');
+    alert('Будь ласка, заповніть всі поля форми!');
+    return;
   }
 
   localStorage.removeItem(LOCAL_KEY);

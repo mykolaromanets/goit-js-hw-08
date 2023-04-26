@@ -12,18 +12,7 @@ player.on('timeupdate', throttle(onPlay, 1000));
 
 const currentTime = Number(localStorage.getItem('videoplayer-current-time'));
 
-player
-  .setCurrentTime(currentTime)
-  .then(function (seconds) {})
-  .catch(function (error) {
-    switch (error.name) {
-      case 'RangeError':
-        break;
-      default:
-        break;
-    }
-  });
-
+player.setCurrentTime(currentTime);
 player
   .setColor('#45a247')
   .then(function (color) {})
